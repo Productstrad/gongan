@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<something-else-entirely>
+
+<proxool>
+    <alias>defaultDB</alias>
+    <driver-url>jdbc:mysql://192.168.33.59:3306/pss?useUnicode=true&amp;characterEncoding=utf-8</driver-url>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <statistics>1m,15m,1d</statistics> 
+    <driver-properties>
+      <property name="user" value="mengdz"/>
+      <property name="password" value="mengdz"/>
+    </driver-properties>
+    <maximum-connection-count>100</maximum-connection-count>  <!--最大连接数(默认5个),超过了这个连接数,再有请求时,就排在队列中等候,最大的等待请求数由maximum-new-connections决定-->   
+    <minimum-connection-count>2</minimum-connection-count>  <!--最小连接数(默认2个)-->   
+    <house-keeping-sleep-time>90000</house-keeping-sleep-time> <!--proxool自动侦察各个连接状态的时间间隔(毫秒),侦察到空闲的连接就马上回收,超时的销毁 默认30秒-->
+    <maximum-new-connections>10</maximum-new-connections>   <!--没有空闲连接可以分配而在队列中等候的最大请求数,超过这个请求数的用户连接就不会被接受--> 
+    <prototype-count>5</prototype-count> <!--最少保持的空闲连接数(默认2个)-->  
+    <house-keeping-test-sql>select now()</house-keeping-test-sql>
+</proxool> 
+
+<proxool>
+    <alias>defaultDB_s0</alias>
+    <driver-url>jdbc:mysql://192.168.33.59:3306/pss?useUnicode=true&amp;characterEncoding=utf-8</driver-url>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <statistics>1m,15m,1d</statistics> 
+    <driver-properties>
+      <property name="user" value="mengdz"/>
+      <property name="password" value="mengdz"/>
+    </driver-properties>
+    <maximum-connection-count>100</maximum-connection-count>  <!--最大连接数(默认5个),超过了这个连接数,再有请求时,就排在队列中等候,最大的等待请求数由maximum-new-connections决定-->   
+    <minimum-connection-count>2</minimum-connection-count>  <!--最小连接数(默认2个)-->   
+    <house-keeping-sleep-time>90000</house-keeping-sleep-time> <!--proxool自动侦察各个连接状态的时间间隔(毫秒),侦察到空闲的连接就马上回收,超时的销毁 默认30秒-->
+    <maximum-new-connections>10</maximum-new-connections>   <!--没有空闲连接可以分配而在队列中等候的最大请求数,超过这个请求数的用户连接就不会被接受--> 
+    <prototype-count>5</prototype-count> <!--最少保持的空闲连接数(默认2个)-->  
+    <house-keeping-test-sql>select now()</house-keeping-test-sql>
+</proxool>
+
+</something-else-entirely>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>左侧菜单 </title>
+<meta name="keywords" content="www.cnblogs.com/jihua"/>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/left.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    // 树状菜单
+    $(document).ready(function () {
+        $(".l1").toggle(function () {
+            $(".slist").animate({ height: 'toggle', opacity: 'hide' }, "slow");
+            $(this).next(".slist").animate({ height: 'toggle', opacity: 'toggle' }, "slow");
+        }, function () {
+            $(".slist").animate({ height: 'toggle', opacity: 'hide' }, "slow");
+            $(this).next(".slist").animate({ height: 'toggle', opacity: 'toggle' }, "slow");
+        });
+
+        $(".l2").toggle(function () {
+            $(this).next(".sslist").animate({ height: 'toggle', opacity: 'toggle' }, "slow");
+        }, function () {
+            $(this).next(".sslist").animate({ height: 'toggle', opacity: 'toggle' }, "slow");
+        });
+
+        $(".l2").click(function () {
+            $(".l3").removeClass("currentl3");
+            $(".l2").removeClass("currentl2");
+            $(this).addClass("currentl2");
+        });
+
+        $(".l3").click(function () {
+            $(".l3").removeClass("currentl3");
+            $(this).addClass("currentl3");
+        });
+
+        $(".close").toggle(function () {
+            $(".slist").animate({ height: 'toggle', opacity: 'show' }, "fast");
+            $(".sslist").animate({ height: 'toggle', opacity: 'show' }, "fast");
+        }, function () {
+            $(".slist").animate({ height: 'toggle', opacity: 'hide' }, "fast");
+            $(".sslist").animate({ height: 'toggle', opacity: 'hide' }, "fast");
+        });
+    });
+</script>
+<base target="main">
+</head>
+
+<body class="leftp">
+<!--h1 class="title"><span class="close">全部收起/展开</span>Jihua树形菜单</h1-->
+<div class="menu">
+  <h1 class="l1"><span class="dot1"></span>一级菜单</h1>
+  <div class="slist">
+    <h2 class="l2"><a href="list.html">信息列表</a></h2>
+    <ul class="sslist">
+      <li class="l3"><a href="input.html">信息录入</a></li>
+      <li class="l3"><a href="view.html">客户信息</a></li>
+      <li class="l3"><a href="list.html" >信息列表</a></li>
+      <li class="l3"><a href="#">三级菜单</a></li>
+<li class="l3"><a href="index.html">首页</a></li>
+    </ul>
+    <h2 class="l2"><a href="#">二级菜单</a></h2>
+    <ul class="sslist">
+      <li class="l3"><a href="#">三级菜单</a></li>
+      <li class="l3"><a href="#">三级菜单</a></li>
+      <li class="l3"><a href="http://jihua.cnblogs.com" target="_blank">三级菜单</a></li>
+      <li class="l3"><a href="#">三级菜单</a></li>
+    </ul>
+    <h2 class="l2u"><a href="#">二级</a></h2>
+  </div>
+  <h1 class="l1"><span class="dot1"></span>一级博客园</h1>
+  <div class="slist">
+    <h2 class="l3"><a href="#">二级菜单计划</a></h2>
+    <h2 class="l3"><a href="#">二级菜单</a></h2>
+    <h2 class="l3"><a href="#">二级菜单</a></h2>
+  </div>
+  <h1 class="l1"><span class="dot1"></span>一级菜单</h1>
+  <div class="slist">
+    <h2 class="l3"><a href="#">二级菜单</a></h2>
+    <h2 class="l3"><a href="#">二级菜单</a></h2>
+    <h2 class="l3"><a href="#">二级菜单</a></h2>
+  </div>
+</div>
+</body>
+</html>

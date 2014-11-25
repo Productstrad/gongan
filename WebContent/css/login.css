@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+#headarea {height:60px;margin-bottom:20px}
+#headarea .case { background:none}
+#headarea .logoarea {width:440px;height:93px;float:left;background:transparent url(../images/logo.jpg) no-repeat scroll 0 0px;}
+#headarea .logoarea h1 {font-size:0px ;color:#fff;margin-bottom:5px;text-indent:-999em;}
+.loginadbg {margin-top:90px;background:transparent url(../images/ladbg.jpg) no-repeat scroll 0 0 ; height:350px}
+
+.log_l {width:570px;float:left;}
+.log_r {width:370px;float:right;}
+
+.loginarea {width:330px;height:300px; position:relative;}
+.loginarea .bg{width:330px;height:300px; background-color:#8c9bc1; filter:alpha(opacity=30);opacity:0.3; position:absolute;top:0px;left:0px; z-index:10px}
+.loginarea .k {width:294px;border:1px solid #ccc; background-color:#fff;padding:48px 10px 0px; position:absolute;top:7px; left:7px; z-index:20;height:235px; }
+.loginarea .w { position:absolute;top:23px; left:22px; z-index:30}
+.loginarea .inp {border:1px solid #bbb; background-color:#fff; padding:5px; width:237px;height:20px;color:#999}
+.loginarea .inp1 {border:1px solid #bbb; background-color:#fff; padding:5px; width:80px;height:20px;color:#999}
+.loginarea .col {width:250px; margin:10px auto;}
+.loginarea .btn_login {width:252px; background:#e86542; text-align:center; display:block;height:27px;font:bold 16px "微软雅黑";}
+.loginarea a.btn_login:link,.loginarea a.btn_login:visited {color:#fff;padding-top:8px}
+
+.loginarea .col span {float:right;padding-top:5px}

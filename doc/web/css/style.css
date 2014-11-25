@@ -1,0 +1,220 @@
+﻿/* CSS Document */
+
+/*
+//////////////////////////////
+css v1.0 
+2014-10-10
+/////////////////////////////
+*/
+
+/*css reset*/
+
+body , div,td { font-size: 12px;line-height: 22px; font-family: arial, helvetica,"宋体", sans-serif; color:#8d94aa}
+body {margin:0px; padding:0px;background-color:#fff; }
+div,form,img,ul,ol,li,dl,dt,dd {margin:0px; padding:0px; border:0px; list-style:none; }
+p,h1,h2,h3,h4,h5,h6 {margin:0px; padding:0px; font-size:12px; font-weight:normal;}
+INPUT { font-size: 12px; font-family: arial, helvetica, sans-serif;padding:1px}
+SELECT {font-size: 12px; font-family:arial, helvetica, sans-serif;}
+ul,li {list-style-type: none;} 
+
+ 
+
+/*全局公共样式*/
+textarea{resize:none;} /*hack for chrome, disable chrome resizes textarea*/
+a { color:#333;text-decoration: none;}
+a:link { color: #626f90;} 
+a:hover { color: #ff3300; text-decoration: none;} 
+
+.fl {float:left}
+.fr {float:right}
+
+.cf{zoom:1;}
+.cf:after{content:'.';display:block;visibility:hidden;clear:both;height:0px;}
+
+.clear {clear:both;display:block;height:0;overflow:hidden;margin:0px 6px;} 
+
+.black {color:#333}
+.org {color:#ed5229}
+
+/* bg .listtable .ttd td ,.listtable .ttd2 td ,*/
+.bg ,.dailylayer .close,.icon,
+#leftarea li .dot1,.rigbox .fd,#leftarea li .dot2,.tui-text-list li,.itable li.un
+{background: transparent url(../images/bg-x.gif) repeat-x scroll 1000px 1000px ;}
+/*background-repeat: no-repeat; background-image: url(../images/dot_nav_arrow.gif);
+background-position: right center;*/
+
+body { background-color:#ebf0fa; }
+.case {width:980px ;margin:0px auto;background-color:#fff; overflow:hidden}
+
+.bgf2 {background:#fff url(../images/leftbg2.gif) repeat-y scroll -222px 0 ;width:970px ;}
+.columnl {padding-right:0px;}
+.columnr {width:230px;}
+
+.i-mail {background-position: 0 -357px; display:inline-block;padding-left:18px; height:25px; background-repeat: no-repeat;margin:3px 5px 0px;vertical-align:middle}
+
+/********/
+.topp {background-color:#4c5570;}
+#headarea { background-color:#4c5570;height:50px;}
+#headarea .heard-logo { background-color:#444c65;width:190px; height:50px;}
+#headarea .heard-logo h1 { font-size:0px; text-indent:999px;background:transparent url(../images/tlogo.gif) no-repeat scroll 0 0 ;width:100px; height:30px; margin:12px auto 0px}
+#headarea .heard-id {width:300px;padding:10px 20px 0px}
+#headarea .heard-id h3 {float:left; padding:5px 10px 0px;font: normal 16px "微软雅黑"; color:#fff}
+#headarea .heard-rig { text-align:right;padding:20px 30px 0px; color:#9b9faf} 
+#headarea .heard-rig  a:link,#headarea .heard-rig  a:visited {color:#d1d5e2}
+
+#headarea .heard-id .idpic{-moz-border-radius:30px;-webkit-border-radius: 30px;border-radius: 30px;width:30px;height:30px; float:left}
+#headarea .heard-id .idpic img {-moz-border-radius: 30px;-webkit-border-radius: 30px;border-radius: 30px;width:30px;height:30px;}
+/*****************************/
+
+
+/*************************/
+#mainarea {padding:30px 40px; position:relative}
+#mainarea .mfl {margin-right:270px;}
+
+.k { background-color:#fff; border-left:#e5e9f3 1px solid; border-right:#e5e9f3 1px solid; padding:0px;margin-bottom:30px}
+.k .bd {padding:20px}
+.k .f {background-position: 0 -110px;height:5px; overflow:hidden;}
+
+.conrig {width:230px; float:right;position:absolute; top:30px; right:40px;}
+.rigbox {margin-bottom:15px;background-color:#fff; border-left:#e5e9f3 1px solid; border-right:#e5e9f3 1px solid; padding:0px;margin-bottom:20px}
+.rigbox .hd {height:40px; background-color:#7785a7}
+.rigbox .hd h3 {float:left; width:150px;font: normal 16px "微软雅黑";  color:#fff;padding:8px 10px 0px;}
+.rigbox .hd span {float:right;padding:5px 10px 0px;}
+.rigbox .bd {padding:10px 15px;}
+.rigbox .fd {background-position: 0 -110px;height:5px; overflow:hidden; clear:both}
+
+.tui-text-list {clear:both}
+.tui-text-list li{ background-position: 0 -168px; padding-left:10px;color:#999;line-height: 28px;background-repeat: no-repeat; }
+.tui-text-list li span {float:right;color:#999}
+/**************************/
+.myinfoarae {}
+.myinfoarae .bd {height:90px;padding:30px}
+.myinfoarae .jinb {width:50%;padding: 10px 0px 10px 20px ; float:left}
+.myinfoarae .jinb h3 {font: normal 16px "微软雅黑"; color:#aaa;padding-bottom:10px;}
+.myinfoarae .jinb h4 {font: bold 34px Arial, Helvetica, sans-serif; color:#6f7b91;}
+.myinfoarae .jinb h4 strong {font: bold 20px Arial, Helvetica, sans-serif; color:#e4788c;margin-right:8px}
+.myinfoarae .jinb h4 span {margin-left:30px;font: normal 12px "宋体"; color:#ddd}
+.myinfoarae .fr {width:30%; border-left:1px solid #eee;padding-left:30px;margin: 10px 0px 10px 20px ;}
+.myinfoarae .fr p {padding:2px}
+
+.ptitle{padding:8px 5px}
+.ptitle h3 {font: normal 20px "微软雅黑"; color:#616b88 }
+
+.inptable {}
+.inptable .col { padding:6px;}
+.inptable .col1 {width:60px; float:left ;padding-right:12px; text-align:right;}
+.inptable .col2 {width:80%; float:left}
+.inptable .col2 input ,.inptable .col2 textarea {width:80%; border:1px solid #c7d2e7}
+
+.btn {width:80px;height:26px; padding-top:4px; background-color:#e86542; display:block; text-align:center;line-height:none;font: normal 14px "微软雅黑"; }
+.btn-g {width:80px;height:26px; padding-top:4px; background-color:#16b8ae; display:block; text-align:center;line-height:none;font: normal 14px "微软雅黑"; }
+a.btn:link ,a.btn:visited,
+a.btn-g:link ,a.btn-g:visited {color:#FFF}
+
+.itable {}
+.itable .hd {height:42px; background-color:#cbd5e9; overflow:hidden}
+.itable .hd h3 { background-color:#8c9bc1; padding:8px 20px 0px;height:34px; float:left; color:#fff;font: normal 18px "微软雅黑"; }
+.itable li {height:34px; float:left;font-size:14px;padding:8px 20px;color:#616b88}
+.itable li.un {background-position: right -245px; color:#616b88;padding-top:12px ;background-repeat: no-repeat;}
+.itable li.sel { background-color:#8c9bc1; color:#fff;font: normal 18px "微软雅黑"; }
+.itable li.sel a:link,.itable li.sel a:visited {color:#fff}
+.itable .bd {padding-top:5px}
+
+.listtable {width:100%}
+.listtable .tth td{ border-bottom:#cdd5e4 3px solid; height:35px; text-align:center;}
+.listtable .ttd {}
+.listtable .ttd td {background: transparent url(../images/lines.gif) repeat scroll 0 0 ; height:34px; text-align:center; padding-top:6px; }
+.listtable .ttd2 td {background: transparent url(../images/lines.gif) repeat scroll 0 0 ; height:34px; text-align:center;padding-top:6px; background-color:#f8f8f8}
+.listtable .ttd td.ttdf,
+.listtable .ttd2 td.ttdf {text-align:left;padding-left:10px}
+.listtable .ttd:hover,.listtable .ttd2:hover { background-color:#e6f7f7}
+.listtable .ttd2:hover td { background-color:transparent}
+
+/*---------------------- page --------------------------*/
+
+.page_num_tab {padding:28px 8px 20px; clear: both; text-align:center;color:#999} 
+.page_num_tab span {margin:0px 9px;color:#f30}
+.page_num_tab a ,.page_num_tabtop a{margin:0px 5px;padding:3px 12px; display:inline-block;}
+a.page_numbs:link, a.page_numbs:visited{border:1px #e6e6e6 solid; background-color:#ddd; font-weight:bold;-moz-border-radius: 4px;  -webkit-border-radius:4px;border-radius: 4px;}
+a.page_numb:link, a.page_numb:visited{border:1px #eee solid; background-color:#f7f7f7;color:#666;-moz-border-radius: 4px;  -webkit-border-radius:4px;border-radius: 4px;}
+a.page_numb:hover {border:1px #8c9bc1 solid;background-color: #8c9bc1;color:#fff;-moz-border-radius: 4px;  -webkit-border-radius:4px; border-radius: 4px;}
+
+/********************/
+.k .iarea {padding-top:10px}
+.iarea .t {background: transparent url(../images/lines.gif) repeat scroll 0 0 ;width:100%}
+.iarea .t td {}
+.iarea .col2 { padding:0px 5px 0px; position:relative; clear:both}
+.iarea .col {float:left;width:200px;padding:0px 0px 0px; }
+.iarea .col2 span.a {float:left; width:70px; display:inline-block;}
+.iarea .col2 span {height:30px;padding-top:10px;display:inline-block;}
+.iarea .col span.black {float:left; width:120px; display:inline-block;}
+
+.iarea .col3 {float:left;width:60%;padding:0px 0px 0px; position:relative }
+
+.iarea .btn, .iarea .btn-g {width:70px;height:24px; padding-top:4px; position:absolute;top:0px; z-index:30}
+.iarea .btn {right:90px;}
+.iarea .btn-g {right:10px}
+/*.iarea .i-mail { position:absolute;top:0px; right:0px; z-index:20;}*/
+.iarea a.i-mail:link,.iarea a.i-mail:visited {margin-left:10px;color:#C30}
+
+/********************#tel { position:relative}*******/
+.itable #tel {padding:0px}
+.teladd { background-color:#f1f3f8;padding:10px 20px}
+.teladd input { border:1px solid #c7d2e7;padding:7px;margin-right:8px}
+.teladd input.i1 {width:220px}
+.teladd input.i2 {width:280px}
+.teladd .btn { display:inline-block}
+
+.tellist {padding:15px 20px}
+.tellist li {background: transparent url(../images/lines.gif) repeat scroll 0 0px ; position:relative;height:23px; padding-top:10px; float:none}
+.tellist li .col1{width:100px;  position:absolute;top:10px; left:0px; z-index:10}
+.tellist li .col2 {margin-left:100px; }
+.tellist li .col2 span { color:#aaa;padding-left:10px}
+.tellist li:hover { background-color:#e6f7f7}
+
+/***************************/
+
+.pingf {margin-top:20px}
+.pingf h3 {color:#616b88;font: normal 18px "微软雅黑";padding-bottom:10px}
+.pingf h3 .org {font: normal 22px Arial, Helvetica, sans-serif;padding:0px 10px}
+.pingf .col {border-top:#eaeef4 3px solid;border-bottom:#eaeef4 3px solid;height:40px;}
+.pingf .col .c {float:left;width:32%;padding-top:10px;padding-left:5px}
+.pingf .c span.star { width:15px; height:15px;background-position: 0 -295px; display:inline-block ;margin:0px 2px}
+
+.note {padding:15px 5px}
+.note h4{color:#bbb; font-weight:none;}
+
+/********************* ****/
+
+.dailylayer { position:absolute; top:0px; left:-15px; z-index:20; width:260px; background-color:#fff; border:1px solid #abb5cd}
+.dailylayer .hd { background-color:#cbd5e9;height:30px;}
+.dailylayer .hd h3 {font: bold 14px "宋体"; }
+.dailylayer .bd {padding:15px; position:relative}
+.dailylayer .col {padding:3px 0px}
+.dailylayer .col input ,.dailylayer .col textarea{width:90%;padding:5px 4px;border:1px solid #c7d2e7}
+.dailylayer .col .bg {background-repeat: no-repeat; background-position: 97% -336px; border:1px solid #c7d2e7}
+.dailylayer .btn {height:25px;width:60px;}
+.dailylayer a.close { position:absolute;top:5px;right:7px; z-index:25;background-repeat: no-repeat; background-position: 0 -320px; display:block;width:12px;height:12px}
+
+
+
+.rigbox .dailyarea {padding:10px 0px 0px; position:relative}
+.dailyarea .lyears {padding:0px 17px 0px}
+.dailyarea .lyears .fl { float:left;width:20px; font-weight:bold}
+.dailyarea .lyears .fc {float:left;width:150px; text-align:center}
+.dailyarea .lyears .fr {width:20px; font-weight:bold; text-align:right}
+
+.dailyarea .lweek {padding:0px 10px 0px;float:left;width:100%;margin-bottom:0px; border-top:0px solid #f6f7fb;margin-top:5px;}
+.dailyarea .lweek span {display:inline-block; width:30px;height:22px;float:left; text-align:center;color:#aaaaaa;background-color:#f6f7fb;padding-top:3px}
+.dailyarea .lday {padding:0px 9px 10px;}
+.dailyarea .lday a { display:inline-block; width:30px;height:30px;float:left; border-top:1px solid #dee2e7; text-align:center;padding-top:6px}
+.dailyarea .lday a.on {background: transparent url(../images/dailybg.gif) no-repeat scroll center center ; color:#000 }
+
+.rigbox .fd {background-position: 0 -110px;height:5px; overflow:hidden; clear:both}
+
+.dailyarea .lm {background-color:#f6f7fb;padding:10px; clear:both}
+.dailyarea .lm li { border-bottom:1px solid #dde0ea;padding:5px 4px}
+.dailyarea .lm li p {}
+.dailyarea .lm li p.time { color:#b2b2b3;}
+
+.operButton {margin-right:10px; padding:0px; font-size:12px; font-weight:normal;float:right;}

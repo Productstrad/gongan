@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>  
+        <servlet-name>coreServlet</servlet-name>  
+        <servlet-class>  
+            app.weixin.servlet.CoreServlet  
+        </servlet-class>  
+    </servlet>  
+    <!-- url-pattern中配置的/coreServlet用于指定该Servlet的访问路径 -->  
+    <servlet-mapping>  
+        <servlet-name>coreServlet</servlet-name>  
+        <url-pattern>/weixin</url-pattern>  
+    </servlet-mapping>
+
+	<servlet>
+		<servlet-name>proxoolServletConfigurator</servlet-name>
+		<servlet-class>
+			org.logicalcobwebs.proxool.configuration.ServletConfigurator
+		</servlet-class>
+		<init-param>
+			<param-name>xmlFile</param-name>
+			<param-value>WEB-INF/classes/config/proxool.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!-- proxool提供的管理监控工具，可查看当前数据库连接情况。如果运行不成功，请删除本行 -->
+	<servlet>
+		<servlet-name>AdminProxool</servlet-name>
+		<servlet-class>org.logicalcobwebs.proxool.admin.servlet.AdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminProxool</servlet-name>
+		<url-pattern>/ds_info</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>AttackFilter</filter-name>
+		<filter-class>common.AttackFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AttackFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>AttackFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>web-framework</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/classes/spring/applicationContext.xml</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>web-framework</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<!-- <listener> <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> 
+		</listener> <context-param> <param-name>contextConfigLocation</param-name> 
+		<param-value>/WEB-INF/classes/applicationContext.xml</param-value> </context-param> -->
+
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>		
+	</welcome-file-list>
+	<!-- <error-page> <error-code>500</error-code> <location>/jsp/error/500.jsp</location> 
+		</error-page> -->
+	<error-page>
+		<error-code>400</error-code>
+		<location>/jsp/error/400.html</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/jsp/error/403.html</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/jsp/error/404.html</location>
+	</error-page>
+	<error-page>
+		<error-code>503</error-code>
+		<location>/jsp/error/503.html</location>
+	</error-page>
+	<mime-mapping>
+		<extension>txt</extension>
+		<mime-type>application/txt</mime-type>
+	</mime-mapping>
+</web-app>

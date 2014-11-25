@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<superManager>xusy,mengdz</superManager>
+	<domain>weixin.com</domain><!-- 站点域，cookie用到，修改需重启 -->
+	<uploadPicConfig>
+		<rootPicDrectoty>uploadFile/uploadPic</rootPicDrectoty><!-- 站点图片上传根目录 -->
+		<size>1024</size><!--图片最大字节 k为单位  -->
+		<width>1024</width><!-- 图片最大宽度 -->
+		<height>760</height><!-- 图片最大高度 -->
+		<type>jpg,jpeg,png,gif,bmp</type>
+		<dealMethod>waterImage</dealMethod><!-- 图片上传处理方式(只能选一种)：original,cut（从图片中心点按指定宽高剪裁边缘）,waterText,waterImage 分别为原图、剪裁、水印文字、水印图片-->
+		<waterText>公安</waterText><!-- 水印文字 -->
+		<waterImage>images/keaiyu.png</waterImage><!--水印图片地址 web站点相对路径 -->
+		<waterAlpha>0.4f</waterAlpha><!-- 水印透明度,越小越透明 -->
+		<cutImageWidth>200</cutImageWidth><!-- 剪裁后的图片宽度 -->
+		<cutImageHeight>200</cutImageHeight><!-- 剪裁后的图片高度 -->
+	</uploadPicConfig>
+	<uploadMediaConfig>
+		<rootMediaDrectoty>uploadFile/uploadMedia</rootMediaDrectoty><!-- 音/视频上传根目录 -->
+		<videoSize>50</videoSize><!--视频最大字节 m为单位  -->	
+		<audioSize>4</audioSize><!--音频最大字节 m为单位  -->	
+		<videoType>swf,flv,wav,wma,wmv,mid,avi,mpg,asf,rm,rmvb</videoType><!-- 视频类型 -->	
+		<audioType>mp3</audioType><!-- 音频类型 -->		
+	</uploadMediaConfig>
+</config>
