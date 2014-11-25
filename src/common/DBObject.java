@@ -34,8 +34,8 @@ public class DBObject {
 	private Connection getInitConnection(String dbLink) {
 		Connection conn = null;		
 		try {			
-			dbLink="jdbc:mysql://sqld.duapp.com:4050/HJPgdUrVstGRfKbQbRVT?user=cztCWE9APisyvKIaF0b4qWwZ&password=cwLEG8hmDxYGVFCUbXNpL0PuO5lLkz1v";
-//			dbLink="jdbc:mysql://192.168.33.59:3306/pss?user=mengdz&password=mengdz";
+//			dbLink="jdbc:mysql://sqld.duapp.com:4050/HJPgdUrVstGRfKbQbRVT?user=cztCWE9APisyvKIaF0b4qWwZ&password=cwLEG8hmDxYGVFCUbXNpL0PuO5lLkz1v";
+			dbLink="jdbc:mysql://192.168.33.59:3306/pss?user=mengdz&password=mengdz";
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(dbLink);
 		} catch (Exception sqle) {
