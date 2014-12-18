@@ -300,7 +300,7 @@ public class NewsAction {
 	 }
 	
 	/**
-	 * 批量删除 
+	 * 推送新闻
 	 * @param request
 	 * @param response
 	 * @param model
